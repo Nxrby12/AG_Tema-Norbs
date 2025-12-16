@@ -19,27 +19,28 @@ std::shared_ptr<KDNode> KDTree::buildTree(QVector<QPair<double, double>>& points
     
     int axis = depth % 2;
     
+    QVector<QPair<QPair<double, double>, int>> combined;
+    for (int i = 0; i < points.size(); ++i) {
+        combined.append(qMakePair(points[i], ids[i]));
+    }
+    
     if (axis == 0) {
-        std::sort(points.begin(), points.end(), [&ids](const QPair<double, double>& a, const QPair<double, double>& b) {
-            return a.first < b.first;
+        std::sort(combined.begin(), combined.end(), 
+                  [](const QPair<QPair<double, double>, int>& a, 
+                     const QPair<QPair<double, double>, int>& b) {
+            return a.first.first < b.first.first;
         });
-        for (int i = 0; i < points.size(); ++i) {
-            for (int j = i + 1; j < points.size(); ++j) {
-                if (points[i].first > points[j].first) {
-                    std::swap(points[i], points[j]);
-                    std::swap(ids[i], ids[j]);
-                }
-            }
-        }
     } else {
-        for (int i = 0; i < points.size(); ++i) {
-            for (int j = i + 1; j < points.size(); ++j) {
-                if (points[i].second > points[j].second) {
-                    std::swap(points[i], points[j]);
-                    std::swap(ids[i], ids[j]);
-                }
-            }
-        }
+        std::sort(combined.begin(), combined.end(), 
+                  [](const QPair<QPair<double, double>, int>& a, 
+                     const QPair<QPair<double, double>, int>& b) {
+            return a.first.second < b.first.second;
+        });
+    }
+    
+    for (int i = 0; i < combined.size(); ++i) {
+        points[i] = combined[i].first;
+        ids[i] = combined[i].second;
     }
     
     int median = points.size() / 2;

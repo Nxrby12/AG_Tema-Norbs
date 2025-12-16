@@ -22,3 +22,15 @@ target_link_libraries(DijkstraPathVisualizer
     Qt5::Widgets
     Qt5::Xml
 )
+
+add_executable(test_components
+    test_components.cpp
+    Graph.cpp
+    XMLParser.cpp
+    KDTree.cpp
+)
+
+target_link_libraries(test_components
+    Qt5::Core
+    Qt5::Xml
+)
