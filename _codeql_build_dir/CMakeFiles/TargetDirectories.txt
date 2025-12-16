@@ -1,8 +1,0 @@
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/DijkstraPathVisualizer.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/test_components.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/edit_cache.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/rebuild_cache.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/DijkstraPathVisualizer_autogen_timestamp_deps.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/DijkstraPathVisualizer_autogen.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/test_components_autogen_timestamp_deps.dir
-/home/runner/work/AG_Tema-Norbs/AG_Tema-Norbs/_codeql_build_dir/CMakeFiles/test_components_autogen.dir
