@@ -1,0 +1,9 @@
+build/
+*.o
+*.user
+*.autosave
+*.swp
+*.swo
+*~
+CMakeLists.txt.user
+DijkstraPathVisualizer
