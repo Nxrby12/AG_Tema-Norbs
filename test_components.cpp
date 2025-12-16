@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "XMLParser.h"
 #include "Graph.h"
 #include "KDTree.h"
